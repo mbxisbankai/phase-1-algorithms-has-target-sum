@@ -1,5 +1,14 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  //first for loop with i as a constant, starting at 0
+  for(let i = 0; i < array.length; i++){
+    //second for loop with j as a constant, starting at i + 1
+    for(let j = i + 1; j < array.length; j++){
+      if(array[i] + array[j] === target){
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 /* 
@@ -32,3 +41,16 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
+/*
+hasTargetSum(array, target){
+  first for loop with i as a constant, starting at 0
+  second for loop with j as a constant, starting at i + 1
+  if i + j add up to the target {
+    return true
+  } else {
+    return false 
+  }
+}
+
+*/
